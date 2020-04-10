@@ -1,10 +1,20 @@
 import { createStore } from 'redux';
 
+// action types
+
 export const actionTypes = {
   SET_SQUARES: 'setSquares',
   SET_WINNER: 'setWinner',
   PLAY_AGAIN: 'playAgain',
 };
+
+// action creators
+
+export const setSquares = i => ({ type: actionTypes.SET_SQUARES, payload: i });
+export const playAgain = () => ({ type: actionTypes.PLAY_AGAIN });
+export const setWinner = winner => ({ type: actionTypes.SET_WINNER, payload: winner });
+
+// selectors
 
 export const getSquares = state => state.squares;
 export const getXIsNext = state => state.xIsNext;
