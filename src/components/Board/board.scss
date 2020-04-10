@@ -1,0 +1,80 @@
+.board {
+  width: 300px;
+  margin: 25vh auto 0;
+
+  &__status {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__squares {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__square {
+    flex-basis: 100px;
+    height: 100px;
+    font-size: 40px;
+    font-weight: bold;
+    border: none;
+    background-color: #c9f3fd;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    border-radius: 10px;
+    background-color: #791818;
+
+    &--horizontal {
+      right: 0;
+      left: 0;
+      height: 20px;
+
+      &.n1 {
+        top: 30%;
+      }
+
+      &.n2 {
+        bottom: 30%;
+      }
+    }
+
+    &--vertical {
+      top: 0;
+      bottom: 0;
+      width: 20px;
+
+      &.n1 {
+        left: 30%;
+      }
+
+      &.n2 {
+        right: 30%;
+      }
+    }
+  }
+
+  &__again {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 3px solid #791818;
+    border-radius: 10px;
+    background: none;
+
+    &:hover {
+      box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
